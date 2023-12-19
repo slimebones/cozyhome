@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  let counter: number = 0;
+</script>
+
+<div class="container flex gap-2">
+  <div>Counter</div>
+  <div>{counter}</div>
+</div>
