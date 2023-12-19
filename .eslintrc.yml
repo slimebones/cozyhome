@@ -22,12 +22,15 @@ plugins:
   - "@typescript-eslint"
   - "unused-imports"
 rules:
+  "@typescript-eslint/object-curly-spacing":
+    - "error"
+    - "never"
   "@typescript-eslint/strict-boolean-expressions":
     - "error"
     -
       allowString: false
       allowNumber: false
-  "@typescript-eslint/no-unused-vars": "error"
+  "@typescript-eslint/no-unused-vars": "off"
 
   # enforce only-typed declarations
   # https://stackoverflow.com/a/75207777/14748231
@@ -67,3 +70,6 @@ ignorePatterns:
   - src/**/*.spec.ts
   - src/frontend/generated/*
   - tailwind.config.js
+env:
+  # https://stackoverflow.com/a/70244676
+  shared-node-browser: true
